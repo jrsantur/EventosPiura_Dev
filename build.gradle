@@ -1,16 +1,18 @@
 ext {
     configuration = [
-            package             : "piura.events",
+            package             : "com.startup.piura.eventos",
             buildToolsVersion   : "24.0.0",
             compileVersion      : 24,
             minSdk              : 21,
             targetSdk           : 22,
             version_code        : 4,
-            version_name        : "0.4",
+            version_name        : "0.4"
+
+
     ]
 
     libraries = [
-            supportVersion      : "24.0.0",
+            supportVersion      : "23.0.1",
             dagger              : "2.0",
             rxjava              : "1.0.0",
             rxandroid           : "0.24.0",
