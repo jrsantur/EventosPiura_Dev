@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "969606983069",
+    "firebase_url": "https://project-5986756594160097111.firebaseio.com",
+    "project_id": "project-5986756594160097111",
+    "storage_bucket": "project-5986756594160097111.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969606983069:android:99977d2fecf37607",
+        "android_client_info": {
+          "package_name": "com.startup.piura.eventos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969606983069-nhevk1v7gdcks64gl0horijn5143gtd4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.startup.piura.eventos",
+            "certificate_hash": "E8D05037F35DCF0D60CEE2CD546AA70EEB4AC3D3"
+          }
+        },
+        {
+          "client_id": "969606983069-eg74eg3jh1u63rt8btf6fdkavpo4tidi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtK8HSURmtJU0Bqje3CeY-rqoYKaGeqEk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969606983069-eg74eg3jh1u63rt8btf6fdkavpo4tidi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

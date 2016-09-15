@@ -1,21 +1,49 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.startup.piura.eventos.views.FragmentLogin">
+    tools:context=".views.fragments.FragmentLogin"
+    android:weightSum="3"
+    android:orientation="vertical">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/fb_login"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content" />
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3">
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-</RelativeLayout>
+        android:orientation="vertical"
+        android:gravity="bottom|center_horizontal"
+        android:layout_gravity="end"
+        >
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/fb_login"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:textSize="18sp"
+            style="@style/FacebookLoginButton"
+            />
+
+        <com.twitter.sdk.android.core.identity.TwitterLoginButton
+            android:id="@+id/button_twitter_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
