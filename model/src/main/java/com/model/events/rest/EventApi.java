@@ -6,6 +6,7 @@ import com.model.events.rest.wrappers.UsuarioPreferencia;
 
 import java.util.List;
 
+import retrofit.http.Body;
 import retrofit.http.GET;
 import retrofit.http.POST;
 import retrofit.http.Query;
@@ -26,5 +27,5 @@ public interface EventApi {
     Observable<Preferencias> getPreferencias();
 
     @POST("")
-    Observable<List<UsuarioPreferencia>> sendPreferenciasUsuario();
+    Observable<List<UsuarioPreferencia>> sendPreferenciasUsuario(@Body UsuarioPreferencia usuarioPreferencia);
 }
