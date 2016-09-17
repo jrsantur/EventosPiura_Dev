@@ -8,6 +8,9 @@ import com.model.events.entities.Preferencias;
 import com.model.events.repository.EventRepository;
 import com.model.events.rest.utils.deserializers.EventsResultsDeserializer;
 import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.logging.HttpLoggingInterceptor;
+
+import static com.squareup.okhttp.logging.HttpLoggingInterceptor.*;
 
 import java.util.List;
 
@@ -31,7 +34,17 @@ public class RestDataSource  implements EventRepository{
     @Inject
     public RestDataSource(EventAuthorizer eventAuthorizer){
         OkHttpClient client = new OkHttpClient();
+        /*
+        MarvelSigningIterceptor signingIterceptor =
+                new MarvelSigningIterceptor(
+                        marvelAuthorizer.getApiClient(),
+                        marvelAuthorizer.getApiSecret());
+        */
+        HttpLoggingInterceptor logginInterceptor = new HttpLoggingInterceptor();
+        logginInterceptor.setLevel(Level.BODY);
 
+        //client.interceptors().add(signingIterceptor);
+        client.interceptors().add(logginInterceptor);
 
 
         Gson customGsonInstance = new GsonBuilder()
@@ -53,12 +66,8 @@ public class RestDataSource  implements EventRepository{
 
         mEventApi = eventApiAdapter.create(EventApi.class);
 
-
-
     }
 
-
-    //obtener
     @Override
     public Observable<Event> getEvent(int ventId) {
         return mEventApi.getEventById(ventId).flatMap(new Func1<List<Event> ,Observable<Event>>(){
