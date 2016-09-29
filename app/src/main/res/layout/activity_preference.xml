@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.startup.piura.eventos.views.activities.WellcomeActivity">
+    tools:context="com.startup.piura.eventos.views.activities.PreferenceActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,26 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_wellcome" />
-
-
-    <fragment
-        android:id="@+id/formDataUser"
-        android:name="com.startup.piura.eventos.views.fragments.DatosUsuarioFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_datos_usuario"
-        />
-
-    <fragment
-        android:id="@+id/fromUser"
-        android:name="com.startup.piura.eventos.views.fragments.LocalidadFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_localidad" />
-
-
-
+    <include layout="@layout/content_preference" />
 
 
 

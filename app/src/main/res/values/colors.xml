@@ -15,4 +15,7 @@
     <color name="grey.dark">#ff2c2c2c</color>
 
     <color name="black_dark">#202020</color>
+
+    <color name="negro_semitransparente">#B2000000</color>
+
 </resources>

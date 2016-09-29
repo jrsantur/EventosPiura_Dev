@@ -101,6 +101,8 @@ dependencies {
     compile 'com.google.firebase:firebase-ads:9.4.0'
     compile 'com.facebook.android:facebook-android-sdk:4.6.0'
     compile 'com.android.support:support-v4:23.0.1'
+    compile 'com.android.support:palette-v7:22.2.0'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -5,4 +5,5 @@ package com.model.events.entities;
  */
 
 public class Lugares {
+
 }

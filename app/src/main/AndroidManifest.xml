@@ -20,6 +20,14 @@
         <activity
             android:name=".views.activities.WellcomeActivity"
             android:label="@string/title_activity_wellcome"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.activities.DetailEventActivity"
+            android:label="@string/title_activity_detail_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".views.activities.PreferenceActivity"
+            android:label="@string/title_activity_preference"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
