@@ -17,8 +17,6 @@ public class WellcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_wellcome);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
     }
 
 }
