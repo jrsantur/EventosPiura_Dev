@@ -1,5 +1,6 @@
 package com.startup.piura.eventos.views.activities;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -12,8 +13,15 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.startup.piura.eventos.R;
+import com.startup.piura.eventos.mvp.views.EventDetailsView;
+import com.startup.piura.eventos.views.fragments.MapFragment;
 
-public class DetailEventActivity extends AppCompatActivity {
+import java.util.Map;
+
+public class DetailEventActivity extends AppCompatActivity implements EventDetailsView {
+
+    Context mContext;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +43,9 @@ public class DetailEventActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
+        mContext = getApplicationContext();
     }
 
     @Override
@@ -58,4 +69,23 @@ public class DetailEventActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void showMaps() {
+        MapFragment map = MapFragment.newInstance();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.map_content, map)
+                .commit();
+
+    }
+
+    @Override
+    public void showImagen() {
+
+    }
+
+    @Override
+    public void showGaleriaImages() {
+
+    }
 }

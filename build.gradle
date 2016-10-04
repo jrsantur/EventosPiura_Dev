@@ -3,8 +3,8 @@ ext {
             package             : "com.startup.piura.eventos",
             buildToolsVersion   : "24.0.0",
             compileVersion      : 24,
-            minSdk              : 21,
-            targetSdk           : 22,
+            minSdk              : 15,
+            targetSdk           : 24,
             version_code        : 4,
             version_name        : "0.4"
 

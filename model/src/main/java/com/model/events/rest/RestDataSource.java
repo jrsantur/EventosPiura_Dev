@@ -70,11 +70,12 @@ public class RestDataSource  implements EventRepository{
 
     @Override
     public Observable<Event> getEvent(int ventId) {
-        return mEventApi.getEventById(ventId).flatMap(new Func1<List<Event> ,Observable<Event>>(){
-            @Override public Observable<Event> call (List<Event> events){
-                return Observable.just(events.get(0));
-            }
-        });
+        return mEventApi.getEventById(ventId)
+                .flatMap(new Func1<List<Event> ,Observable<Event>>(){
+                    @Override public Observable<Event> call (List<Event> events){
+                        return Observable.just(events.get(0));
+                    }
+                 });
     }
 
     @Override
