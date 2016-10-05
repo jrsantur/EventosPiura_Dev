@@ -7,18 +7,19 @@ import com.model.events.entities.Event;
 import com.model.events.entities.Preferencias;
 import com.model.events.repository.EventRepository;
 import com.model.events.rest.utils.deserializers.EventsResultsDeserializer;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.logging.HttpLoggingInterceptor;
 
-import static com.squareup.okhttp.logging.HttpLoggingInterceptor.*;
 
 import java.util.List;
 
+
 import javax.inject.Inject;
 
-import retrofit.GsonConverterFactory;
-import retrofit.Retrofit;
-import retrofit.RxJavaCallAdapterFactory;
+
+import okhttp3.OkHttpClient;
+import okhttp3.logging.HttpLoggingInterceptor;
+import retrofit2.Retrofit;
+import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
+import retrofit2.converter.gson.GsonConverterFactory;
 import rx.Observable;
 import rx.functions.Func1;
 
@@ -41,7 +42,7 @@ public class RestDataSource  implements EventRepository{
                         marvelAuthorizer.getApiSecret());
         */
         HttpLoggingInterceptor logginInterceptor = new HttpLoggingInterceptor();
-        logginInterceptor.setLevel(Level.BODY);
+        logginInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
 
         //client.interceptors().add(signingIterceptor);
         client.interceptors().add(logginInterceptor);
