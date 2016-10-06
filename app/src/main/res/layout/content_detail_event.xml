@@ -10,7 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-
+    tools:context="com.startup.piura.eventos.views.activities.DetailEventActivity"
+    tools:showIn="@layout/activity_detail_event"
     android:orientation="vertical">
 
     <View
@@ -120,12 +121,6 @@
             android:layout_marginTop="4dp"/>
 
     </LinearLayout>
-    
-    <Button
-        android:id="@+id/btn_asistir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Asistir"/>
 
 
 </LinearLayout>
