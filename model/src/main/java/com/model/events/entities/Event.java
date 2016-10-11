@@ -8,6 +8,7 @@ import java.util.Observable;
 @SuppressWarnings("unused")
 public class Event {
 
+    public String id;
     public Event() {
 
     }
